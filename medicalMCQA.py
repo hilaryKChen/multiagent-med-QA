@@ -15,7 +15,7 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='repla
 # 初始化GPT-4o-mini配置
 os.environ["OPENAI_MODEL_NAME"] = 'gpt-4o'
 os.environ["OPENAI_API_BASE"] = "https://api.openai-proxy.org/v1"
-os.environ["OPENAI_API_KEY"] = "sk-iY1j43dZqk8b9ReDULM6zzYN3GJ85eHLfFUi6srBUaEZDRJm" # 你的openai密匙
+os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"  # Replace with your actual OpenAI API key
 
 
 

@@ -3,7 +3,7 @@ from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
 import os
 os.environ["OPENAI_API_BASE"] = "https://api.openai-proxy.org/v1"
-os.environ["OPENAI_API_KEY"] = "sk-iY1j43dZqk8b9ReDULM6zzYN3GJ85eHLfFUi6srBUaEZDRJm"
+os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"  # Replace with your actual OpenAI API key
 
 @tool("MY RAG TOOL")
 def rag_tool(question: str) -> str:
@@ -11,7 +11,7 @@ def rag_tool(question: str) -> str:
     embedding = OpenAIEmbeddings()
     db = Chroma(collection_name="vdb",persist_directory='./VectorStore2', embedding_function=embedding)
     #print(db._collection.count())
-    results = db.similarity_search(question , k=3)  # 返回最相似的 2 个文档
+    results = db.similarity_search(question , k=3)  # Return the most similar 3 documents
     contents = []
     for doc in results:
         contents.append(doc.page_content)

@@ -10,7 +10,7 @@ import wikipedia
 
 
 os.environ["OPENAI_API_BASE"] = "https://api.openai-proxy.org/v1"
-os.environ["OPENAI_API_KEY"] = "sk-iY1j43dZqk8b9ReDULM6zzYN3GJ85eHLfFUi6srBUaEZDRJm"
+os.environ["OPENAI_API_KEY"] = "your_openai_api_key_here"  # Replace with your actual OpenAI API key
 
 # Sample abstracts from PubMed
 pubmed_dataset = load_dataset("ccdv/pubmed-summarization", split="train[:100000]")
